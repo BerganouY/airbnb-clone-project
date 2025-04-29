@@ -196,3 +196,32 @@ This section outlines the security measures implemented to protect the applicati
 * **Payment Processing:** HTTPS, strong authentication, and secure payment gateways are essential to ensure the security and integrity of financial transactions and protect sensitive payment data.
 * **Property Data:** Authorization and data validation prevent unauthorized modification or deletion of property listings and related information.
 * **Booking Information:** Secure handling of booking data (dates, user details) is necessary to maintain privacy and prevent fraud.
+
+
+## CI/CD Pipeline
+
+This section explains the Continuous Integration and Continuous Delivery/Deployment (CI/CD) pipeline implemented in this project.
+
+**A. What is CI/CD?**
+
+CI/CD is a set of practices that automate the software development process, from code changes to deployment.
+* **Continuous Integration (CI)** focuses on automatically building and testing code changes whenever they are committed to a shared repository.
+* **Continuous Delivery/Deployment (CD)** automates the release of those validated code changes to a staging or production environment.
+
+**B. Importance of CI/CD**
+
+CI/CD pipelines are crucial for this project because they:
+
+* **Accelerate development:** Automating repetitive tasks allows developers to focus on writing code.
+* **Improve code quality:** Automated testing catches bugs early in the development cycle.
+* **Increase deployment frequency:** Automation simplifies and speeds up the release process.
+* **Reduce risk:** Automated testing and deployment minimize the chance of errors in production.
+* **Enhance collaboration:** CI/CD provides a clear and transparent process for all team members.
+
+**C. Tools Used for CI/CD**
+
+Several tools can be used to implement CI/CD pipelines. Some of the tools that could be used in this project include:
+
+* **GitHub Actions:** A platform to automate development workflows directly within GitHub repositories, enabling CI/CD through configurable workflows.
+* **Jenkins:** An open-source automation server that supports building, testing, and deploying applications, widely used to create flexible CI/CD pipelines.
+* **Docker:** A platform for developing, shipping, and running applications in containers. Docker helps to ensure consistency across different environments and simplifies deployment.
