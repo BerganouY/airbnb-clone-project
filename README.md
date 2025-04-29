@@ -50,3 +50,13 @@
     * Defines project scope and objectives.
     * Creates project schedules and manages resources.
     * Communicates with stakeholders and resolves issues.
+
+## Technology Stack
+
+This project utilizes the following technologies:
+
+* **Django:** A high-level Python web framework that enables rapid development of clean, pragmatic web applications. In this project, Django is used for building the RESTful APIs that power the application's backend.
+* **PostgreSQL:** A powerful, open-source relational database system. It is used in this project for storing and managing the application's data, including user information, product details, and order history.
+* **GraphQL:** A query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a more efficient and flexible alternative to REST APIs, allowing clients to request only the specific data they need.
+* **GitHub Actions:** A continuous integration and continuous delivery (CI/CD) platform that automates your software development workflow. In this project, GitHub Actions is used to automate testing, building, and deployment of the application whenever code is pushed to the repository.
+* **Jenkins:** An open-source automation server. It helps to automate the parts of the software development process related to building, testing, and deploying, facilitating continuous integration and continuous delivery. In this project, Jenkins is used to create CI/CD pipelines for automated testing and deployment.
