@@ -127,3 +127,28 @@ This section outlines the key entities in the database and their relationships.
 * A **Property** can have multiple **Reviews** (one-to-many relationship).
 * A **Booking** has one **Payment** (one-to-one relationship or one-to-optional-one).
 * A **Payment** belongs to one **Booking** (one-to-one relationship).
+
+
+## Feature Breakdown
+
+This section details the main features of the Airbnb clone project and their functionalities.
+
+**A. User Management**
+
+This feature allows users to create accounts, log in, manage their profiles, and handle authentication. It ensures secure access to the platform and enables personalized experiences for both hosts and guests.
+
+**B. Property Management**
+
+This feature enables hosts to list their properties, providing details such as location, amenities, pricing, and availability. It also allows hosts to edit property information and manage bookings. This is crucial for hosts to showcase their offerings and control their listings.
+
+**C. Booking System**
+
+This feature facilitates the reservation process between guests and hosts. Guests can search for properties, select dates, and make booking requests. Hosts can confirm or reject bookings, and the system manages booking statuses and details. This feature is core to the platform's functionality, enabling transactions and scheduling.
+
+**D. Review System**
+
+This feature allows guests to leave reviews and ratings for properties they have stayed in. This provides valuable feedback for other users and helps build trust and transparency within the platform. Hosts can also respond to reviews, fostering communication and accountability.
+
+**E. Payment Processing**
+
+This feature handles the financial transactions between guests and hosts. It securely processes payments for bookings, manages payment methods, and ensures accurate transaction records. This is essential for the platform's commercial viability and user trust.
