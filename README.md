@@ -152,3 +152,47 @@ This feature allows guests to leave reviews and ratings for properties they have
 **E. Payment Processing**
 
 This feature handles the financial transactions between guests and hosts. It securely processes payments for bookings, manages payment methods, and ensures accurate transaction records. This is essential for the platform's commercial viability and user trust.
+
+
+## API Security
+
+This section outlines the security measures implemented to protect the application's APIs and sensitive data.
+
+**A. Authentication**
+
+* **Description:** Authentication verifies the identity of users or applications accessing the APIs. This is typically achieved using methods like:
+    * **Token-based authentication (e.g., JWT):** After a user logs in, the server issues a token that the client includes in subsequent requests.
+    * **OAuth 2.0:** A framework for delegated authorization, allowing users to grant limited access to their resources without sharing their credentials.
+* **Importance:** Crucial for protecting user data by ensuring that only authorized users can access their own information and perform actions on their behalf. It also prevents unauthorized access to the application's functionality.
+
+**B. Authorization**
+
+* **Description:** Authorization determines what actions an authenticated user is allowed to perform. This involves defining roles and permissions, ensuring that users can only access the resources and operations they are permitted to.
+* **Importance:** Essential for enforcing access control and preventing users from performing actions they shouldn't, such as modifying data they don't own or accessing administrative functions.
+
+**C. Rate Limiting**
+
+* **Description:** Rate limiting restricts the number of requests that a user or application can make to the APIs within a given timeframe. This helps to:
+    * Prevent denial-of-service (DoS) attacks.
+    * Protect the server from overload.
+    * Ensure fair usage of the APIs.
+* **Importance:** Critical for maintaining the availability and stability of the APIs, especially under heavy load or attack. It also safeguards against abuse and ensures that the system remains responsive.
+
+**D. Data Validation and Sanitization**
+
+* **Description:** Validating and sanitizing user input is essential to prevent various attacks.
+    * **Validation:** Ensures that the data received from the client adheres to the expected format and constraints (e.g., email format, data type).
+    * **Sanitization:** Cleans user input to remove or escape potentially harmful characters or code (e.g., HTML tags, SQL injection attempts).
+* **Importance:** Protects against vulnerabilities like SQL injection, cross-site scripting (XSS), and other injection attacks that could compromise data integrity and security.
+
+**E. HTTPS**
+
+* **Description:** Using HTTPS (HTTP Secure) encrypts communication between the client and the server. This prevents eavesdropping and ensures that data transmitted over the network remains confidential.
+* **Importance:** Fundamental for securing all data transmission, especially sensitive information like user credentials and payment details.
+
+**Security Considerations by Area:**
+
+* **User Data:** Authentication, authorization, and data validation are paramount to protect user information (passwords, personal details) from unauthorized access and manipulation.
+* **Payment Processing:** HTTPS, strong authentication, and secure payment gateways are essential to ensure the security and integrity of financial transactions and protect sensitive payment data.
+* **Property Data:** Authorization and data validation prevent unauthorized modification or deletion of property listings and related information.
+* **Booking Information:** Secure handling of booking data (dates, user details) is necessary to maintain privacy and prevent fraud.
