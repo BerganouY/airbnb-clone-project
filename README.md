@@ -60,3 +60,70 @@ This project utilizes the following technologies:
 * **GraphQL:** A query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a more efficient and flexible alternative to REST APIs, allowing clients to request only the specific data they need.
 * **GitHub Actions:** A continuous integration and continuous delivery (CI/CD) platform that automates your software development workflow. In this project, GitHub Actions is used to automate testing, building, and deployment of the application whenever code is pushed to the repository.
 * **Jenkins:** An open-source automation server. It helps to automate the parts of the software development process related to building, testing, and deploying, facilitating continuous integration and continuous delivery. In this project, Jenkins is used to create CI/CD pipelines for automated testing and deployment.
+
+
+## Database Design
+
+This section outlines the key entities in the database and their relationships.
+
+### Entities
+
+**A. Users**
+
+* **Description:** Stores information about users of the application.
+* **Fields:**
+    * `user_id` (Primary Key): Unique identifier for each user.
+    * `username`: User's login name.
+    * `email`: User's email address.
+    * `password`: User's password (hashed).
+    * `registration_date`: Date the user registered.
+
+**B. Properties**
+
+* **Description:** Stores information about the properties listed on the platform.
+* **Fields:**
+    * `property_id` (Primary Key): Unique identifier for each property.
+    * `owner_id` (Foreign Key referencing Users): ID of the user who owns the property.
+    * `address`: Address of the property.
+    * `property_type`: Type of property (e.g., apartment, house).
+    * `price`: Price per night/day.
+
+**C. Bookings**
+
+* **Description:** Stores information about booking transactions.
+* **Fields:**
+    * `booking_id` (Primary Key): Unique identifier for each booking.
+    * `user_id` (Foreign Key referencing Users): ID of the user who made the booking.
+    * `property_id` (Foreign Key referencing Properties): ID of the booked property.
+    * `check_in_date`: Booking start date.
+    * `check_out_date`: Booking end date.
+
+**D. Reviews**
+
+* **Description:** Stores reviews given by users for properties.
+* **Fields:**
+    * `review_id` (Primary Key): Unique identifier for each review.
+    * `user_id` (Foreign Key referencing Users): ID of the user who wrote the review.
+    * `property_id` (Foreign Key referencing Properties): ID of the property being reviewed.
+    * `rating`: Rating given by the user.
+    * `comment`: Text of the review.
+
+**E. Payments**
+
+* **Description:** Stores information about payment transactions.
+* **Fields:**
+    * `payment_id` (Primary Key): Unique identifier for each payment.
+    * `booking_id` (Foreign Key referencing Bookings): ID of the booking the payment is for.
+    * `payment_date`: Date of the payment.
+    * `amount`: Amount paid.
+    * `payment_method`: Method of payment (e.g., credit card).
+
+### Relationships
+
+* A **User** can have multiple **Properties** (one-to-many relationship).
+* A **User** can make multiple **Bookings** (one-to-many relationship).
+* A **Property** can have multiple **Bookings** (one-to-many relationship).
+* A **User** can write multiple **Reviews** (one-to-many relationship).
+* A **Property** can have multiple **Reviews** (one-to-many relationship).
+* A **Booking** has one **Payment** (one-to-one relationship or one-to-optional-one).
+* A **Payment** belongs to one **Booking** (one-to-one relationship).
